@@ -1,0 +1,196 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+a {
+    text-decoration: none;
+}
+ul,
+ol {
+    list-style: none;
+}
+.clr {
+    clear: both;
+}
+/**main css start**/
+/*header part start*/
+.nav{
+	text-align: center;
+	height: auto;
+	width: 100%;
+background-color: #363636;
+}
+
+.navbar {
+	margin: 0 auto;
+	height: 70px;
+	background-color: transparent;
+}
+.bg-light{
+	background-color:transparent!important;
+}
+.navbar-brand{
+	margin-right: 100px;
+}
+.navbar-nav{
+
+	padding-right:100px;
+}
+.nav-item{
+	padding-right: 20px;
+	text-transform:uppercase;
+	color:aliceblue; 
+}
+.navbar-light .navbar-nav .nav-link {
+	color:#fff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 12px;
+	font-weight: 600px;
+}
+
+
+
+#navbarSupportedContent li a:hover {
+	color:#FFA200;
+	transition: all 0.5s linear!important;
+	
+}
+
+
+/*nav end */
+/*slider part start */
+#full_slider{
+	height: auto;
+	width: 100%;
+	background: cover;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+
+.carousel-inner{
+	height: 550px;
+	top: 0;
+}
+
+
+/* boook tkt form */
+
+#booktkt{
+	height:550px;
+	width: 100%;
+	padding-top:50px;
+	background: #555555;
+	
+}
+.h3_txt{
+		color:#FFA200;
+	font-family: 'Roboto', sans-serif;
+	font-size: 30px;
+	font-weight: 600px;
+	text-align: center;
+	text-transform:uppercase;
+	padding-bottom: 20px;
+}
+.form_custom{
+	position:center;
+	background:  #323232;
+}
+	
+.custom_form{
+	margin-bottom: 20px;
+	background-color:#323232;
+	border-radius:10px;
+	border-style: none;
+	color: aliceblue;
+}
+
+.btn-primary{
+	width: 320px;
+background:  #363636;
+	color: aliceblue;
+	border-style: none;
+}
+.btn-primary:hover{
+	color:  #FFA200;
+	background-color: transparent;
+	 transition: all 0.5s ease-in-out;
+}
+
+
+
+/* loging gase start */
+
+#ligin{
+	height: 550px;
+	background: #A22E30;
+	width: 100%;
+	
+	 border-bottom: 2px #000;
+	
+}
+
+	
+.custom_login_form{
+	padding-top: 10px;
+	margin-top: 100px;
+	background-color: #A22E30;
+	width: 400px;
+	height: auto;
+}
+
+.input_custom{
+	height: 40px;
+	width: 400px;
+	border-radius: 20px;
+	border-style: none;
+	padding-left: 10px;
+	text-align: left;
+	text-transform: uppercase;
+	color: aliceblue;
+	font-family: Constantia, Lucida Bright, DejaVu Serif, Georgia, serif;
+	font-weight: 600;
+	background-color: #555555;
+
+}
+
+
+
+.custom_button {
+	
+ margin-top: 20px;
+	width: 200px;
+	border-radius: 20px;
+	height: 40px;
+background:  #363636;
+	color: aliceblue;
+	border-style: none;
+	cursor: pointer;
+}
+.custom_button:hover{
+	color:  #FFA200;
+	background-color: transparent;
+	 transition: all 0.5s ease-in-out;
+}
+
+.booking{
+	height:550px;
+	width: 100%;
+	padding-top:50px;
+	background: #555555;
+	
+}
+
+
+
+
+
+
+
+
+
