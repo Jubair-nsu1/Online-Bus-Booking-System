@@ -82,6 +82,8 @@ function get_details(){
 global $conn;
 $query = "Select * From booking";
 $result =mysqli_query($conn,$query);
+
+$c=1;
 while($row=mysqli_fetch_array($result)){
   $name = $row['name'];
   $phone = $row['phone'];
@@ -90,15 +92,17 @@ while($row=mysqli_fetch_array($result)){
   $destination = $row['destination'];
   $departure_time = $row['departure_time'];
 
-  echo "<tr>
-   <td>$name</td>
-   <td>$phone</td>
-   <td>$departure_date</td>
-   <td>$bus_name</td>
-   <td>$destination</td>
-   <td>$departure_time</td>
-   </tr>";
+  echo '<tr>
+   <td style="color:red">'.$c.'</td>
+   <td style="color:orange">'.$name.'</td>
+   <td>'.$phone.'</td>
+   <td style="color:green">'.$departure_date.'</td>
+   <td>'.$bus_name.'</td>
+   <td>'.$destination.'</td>
+   <td style="color:green">'.$departure_time.'</td>
+   </tr>';
 
+   $c++;
 }
 
 }

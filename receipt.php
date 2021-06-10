@@ -68,11 +68,12 @@
 </section>
 
 
-
+</br></br>
 <table class="table">
   <thead>
-    <tr>
-      <th scope="col">Name</th>
+    <tr style="color:blue" >
+			<th scope="col" >S.N.</th>
+      <th scope="col" >Name</th>
       <th scope="col">Phone Number</th>
       <th scope="col">Departure Date</th>
       <th scope="col">Bus Name</th>
