@@ -12,6 +12,23 @@
 
 <body>
 
+	<?php
+	$conn =mysqli_connect("localhost", "root","","bts");
+
+	session_start();
+	if (!(isset($_SESSION['email']))) {
+	    session_destroy();
+	    header("location:home.php");
+	} else {
+	    $name     = $_SESSION['name'];
+	    $email = $_SESSION['email'];
+
+	    $conn =mysqli_connect("localhost", "root","","bts");
+			echo '<span class="pull-right top title1" ><span style="color:white"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;Hello,</span> <span class="log log1" style="color:lightyellow">' . $name . '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></button></a></span>';
+	}
+
+	?>
+
 
 
 	<section class="navbar_full">
@@ -41,7 +58,7 @@
 	        <a class="nav-link" href="booking.php">Booking</a>
 	      </li>
 	            <li class="nav-item">
-	        <a class="nav-link" href="home.php">Logout</a>
+	        <a class="nav-link" href="logout.php">Logout</a>
 	      </li>
 
 	    </ul>
@@ -70,28 +87,28 @@
 
 
 			<div class="form-row">
-      <input type="text" class="form-control custom_form" name="name" placeholder="Name">
+      <input type="text" class="form-control custom_form" name="name" placeholder="Name" required>
     </div>
 
 		<div class="form-row">
-		<input type="text" class="form-control custom_form" name="phone" placeholder="Phone No">
+		<input type="text" class="form-control custom_form" name="phone" placeholder="Phone No" required>
 	  </div>
 
 			<div class="form-row">
-      <input type="text" class="form-control custom_form" name="departure_date" placeholder="Departure date">
+      <input type="text" class="form-control custom_form" name="departure_date" placeholder="Departure date" required>
     </div>
 
     <div class="form-row">
-      <input type="text" class="form-control custom_form" name="bus_name" placeholder="Bus Name">
+      <input type="text" class="form-control custom_form" name="bus_name" placeholder="Bus Name" required>
     </div>
 
     <div class="form-row">
     <div class="form-group col-md-6">
-      <input type="" class="form-control custom_form" id="inputFrom" name="destination" placeholder="Destination">
+      <input type="" class="form-control custom_form" id="inputFrom" name="destination" placeholder="Destination" required>
     </div>
     <div class="form-group col-md-6">
 
-      <input type="text" class="form-control custom_form" id="inputTo" name="departure_time" placeholder="Departure time">
+      <input type="text" class="form-control custom_form" id="inputTo" name="departure_time" placeholder="Departure time" required>
     </div>
   </div>
 

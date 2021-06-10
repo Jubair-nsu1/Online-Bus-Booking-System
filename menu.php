@@ -10,9 +10,25 @@
 <link rel="stylesheet" href="css/main.css">
 </head>
 
+
+<?php
+$conn =mysqli_connect("localhost", "root","","bts");
+
+session_start();
+if (!(isset($_SESSION['email']))) {
+    session_destroy();
+    header("location:home.php");
+} else {
+    $name     = $_SESSION['name'];
+    $email = $_SESSION['email'];
+
+    $conn =mysqli_connect("localhost", "root","","bts");
+		echo '<span class="pull-right top title1" ><span style="color:white"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;Hello,</span> <span class="log log1" style="color:lightyellow">' . $name . '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></button></a></span>';
+}
+
+?>
+
 <body>
-
-
 
 <section class="navbar_full">
 
@@ -41,7 +57,7 @@
         <a class="nav-link" href="booking.php">Booking</a>
       </li>
             <li class="nav-item">
-        <a class="nav-link" href="home.php">Logout</a>
+        <a class="nav-link" href="logout.php">Logout</a>
       </li>
 
     </ul>

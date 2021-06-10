@@ -1,22 +1,36 @@
-<<?php
+<?php
 
 $conn =mysqli_connect("localhost", "root","","bts");
 
 
-
-
 if (isset($_POST['login_submit'])) {
+  session_start();
+  if (isset($_SESSION["email"])) {
+      session_destroy();
+  }
+
   $email = $_POST['email'];
   $pass = $_POST['pass'];
   $query = "select * From info Where email='$email' And pass='$pass'";
   $result =mysqli_query($conn,$query);
 
- if(mysqli_num_rows($result)==1){
-  header("Location:menu.php");
-} else {
-  echo "<script>alert('Error login')</script>";
-  echo "<script>window.open('login.php','_self')</script>";
-}
+  $count = mysqli_num_rows($result);
+
+  if($count==1){
+    while ($row = mysqli_fetch_array($result)) {
+          $name = $row['name'];
+          $email = $row['email'];
+    }
+    $_SESSION["name"]     = $name;
+    $_SESSION["email"] = $email;
+    header("location:menu.php");
+  }
+  else{
+    echo "<script>alert('Error login')</script>";
+    echo "<script>window.open('login.php','_self')</script>";
+  }
+
+
 }
 
 
