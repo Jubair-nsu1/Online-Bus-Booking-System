@@ -14,6 +14,8 @@ This is a simple university course project. A user can book a bus for a particul
 
 ### 1. Login Screen
 
+</br>
+
 <p align="center">
 <img src="images/login.jpg" height="400">
 </p>
@@ -21,12 +23,16 @@ This is a simple university course project. A user can book a bus for a particul
 
 ### 2. Booking form
 
+</br>
+
 <p align="center">
 <img src="images/bookingform.jpg" height="300">
 </p>
 </br>
 
 ### 3. View Bookings
+
+</br>
 
 <p align="center">
 <img src="images/reeceipt.jpg" height="350">
